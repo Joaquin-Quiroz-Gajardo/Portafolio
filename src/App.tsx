@@ -31,6 +31,9 @@ function App() {
                 <li className="nav-item">
                   <a className="nav-link">Contacto</a>
                 </li>
+                <li className="nav-item">
+                  <button className="nav-button-asistente">Asistente virtual</button>
+                </li>
               </ul>
               <button onClick={handleDesplegarMenu} className={displayNavLinks?"menu display-nav-links":"menu"}>icono</button>
             </div>
