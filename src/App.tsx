@@ -10,6 +10,11 @@ function App() {
   const handleDesplegarMenu = () => {
     setDisplayNavLinks(!displayNavLinks)
   };
+  const textStyle = {
+    fontFamily: "roboto",
+    fontSize: '8px',
+    fill: 'black'}
+  
   return (
     <div className="App">
 
@@ -23,7 +28,57 @@ function App() {
                   <a className="nav-link" href="#about-me-title">Acerca de mi</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Trabajos</a>
+                  <a className="nav-link" href="#">
+                    <svg
+        viewBox="0 0 100 80"
+        width="20"
+        className="navbar-svg"
+      >
+        <path
+          d="
+          M 5,20
+          Q 50,19 95,20
+          Q 96,40 95,80
+          Q 50,81 5,80
+          Q 4,40 5,20
+          Q 50,19 95,20
+          "
+          fill="none"
+          stroke="white"
+          stroke-width="9"
+        />
+        <path
+          d="
+          M 35,20
+          Q 50,-10 65,20
+          "
+          fill="none"
+          stroke="white"
+          stroke-width="9"
+        />
+        <path
+          d="
+          M 10,20
+          L 15,50
+          Q 50,55 85,50
+          L 90,20
+          "
+          fill="none"
+          stroke="white"
+          stroke-width="9"
+        />
+        <path
+          d="
+          M 44,52
+          L 45,45
+          Q 50,44 55,45
+          L 56,52
+          "
+          fill="none"
+          stroke="white"
+          stroke-width="9"
+        />
+</svg> <p>Trabajos</p></a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link">Proyectos</a>
@@ -50,6 +105,23 @@ function App() {
             <h1 className="descripcion">Especialista en inteligencia artificial</h1>
             <h2 className="subtitulo">Universidad de Buenos Aires</h2>
           </div>
+          <svg className="flecha-hero" viewBox="0 0 100 400">
+            <polygon
+              points="
+                50,0
+                0,80
+                40,40
+                40,400
+                50, 400
+                60,40
+                100, 80
+              "/>
+          </svg>
+          {/* <svg viewBox="0 0 200 200">
+      <text x="100" y="100" style={textStyle}>
+        Hello React!
+      </text>
+    </svg> */}
         </div>
       </section>
 
@@ -74,10 +146,14 @@ function App() {
               <h2 id="about-me-title">Acerca de mí</h2>
               <div className="about-me-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque similique quisquam debitis fugiat consequuntur, porro, laudantium expedita at natus ea est iure laboriosam ipsam reprehenderit exercitationem veniam aliquam tenetur suscipit labore fuga eius fugit voluptatem quas. Distinctio, commodi corrupti? Nesciunt commodi repellendus voluptatibus quas! Fugiat aliquam sequi officia quaerat est.</div>
             </div>
+
+            
           
           </div>
         </div>
+
       </section>
+
 
       {/* trabajos */}
       <section>
@@ -117,6 +193,7 @@ function App() {
         </div>
       </section>
 
+
       {/* proyectos */}
       <section>
         <div className="proyectos">
@@ -132,8 +209,8 @@ function App() {
         </div>
       </section>
 
-      {/* habilidades */}
 
+      {/* habilidades */}
       <section>
         <div className="habilidades">
           <h2 className="habilidades-titulo">Habilidades</h2>
@@ -174,8 +251,8 @@ function App() {
         </div>
       </section>
 
-      {/* contacto */}
 
+      {/* contacto */}
       <footer>
         <div className="contacto">
           <h2 className="contacto-titulo">Contacto</h2>

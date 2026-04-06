@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   scroll-margin-top: 6em;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: roboto;
 }
 
 /* navbar */
@@ -46,6 +48,7 @@ ul.navbar-ul{
 
 ul.navbar-ul > li.nav-item > a.nav-link, a.navbar-brand{
   text-decoration: none;
+  color: #fff;
 }
 ul.navbar-ul > li.nav-item > a.nav-link:visited, a.navbar-brand:visited{
   color: #fff;
@@ -102,6 +105,16 @@ button.nav-button-asistente{
   border-radius: 2em;
   font-size: 1.2em;
 }
+
+a:hover .navbar-svg path{
+  /* transform: scale(2); */
+  stroke-width: 1px;
+}
+
+a.nav-link{
+  display: flex;
+  gap: 0.5em;
+}
 /* hero */
 
 
@@ -111,6 +124,8 @@ div.hero{
   justify-content: center;
   flex-direction: column;
   height: calc(100vh);
+
+  
 
   background-color:hsla(0,100%,50%,1);
   background-image:
@@ -148,11 +163,27 @@ h2.subtitulo{
   opacity: 0.7;
 }
 
+svg.flecha-hero{
+  
+  position: absolute;
+  height: 20em;
+  right: 6em;
+  top: 6em;
+  rotate: 8deg;
+  stroke: yellow;
+    stroke-width: 5px;
+    stroke-dasharray: 0, 10, 25, 10;
+    stroke-linecap: round;
+    fill: none;
+}
+
 
 /* acerca de mi */
 div.about-me{
-  margin-top: 12em;
-  margin-bottom: 12em;
+  padding-top: 12em;
+  padding-bottom: 12em;
+  background-color: #01161e;
+  color: #fff;
 }
 #about-me-title{
   text-align: center;
@@ -165,9 +196,17 @@ div.about-me{
 
 .about-me-title-content{
   padding: 5em;
-  border: black solid 0.25em;
   margin: 5em;
   border-radius: 1em;
+  --shadow-color: 197deg 100% 0%;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 
@@ -236,3 +275,15 @@ cubo.scene{
   87.5%{transform:  rotateY( .895turn) scale3d(0.8, 0.8, 0.8) translateY(1.5em) rotateZ(5deg);}
   100% {transform:  rotateY(  1.turn)   rotateZ(-5deg);}
 }
+
+
+
+/* trabajos */
+
+
+
+/* proyectos */
+
+
+/* habilidades */
+
