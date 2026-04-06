@@ -8,6 +8,7 @@ const Maletin = () => {
         className="navbar-svg"
     >
         <path
+          className="caja"
           d="
           M 5,20
           Q 50,19 95,20
@@ -21,26 +22,31 @@ const Maletin = () => {
           stroke-width="9"
         />
         <path
+          className="mango"
           d="
           M 35,20
           Q 50,-10 65,20
+          Q 65,20 65,20
+          Q 65,20 65,20
           "
           fill="none"
           stroke="white"
           stroke-width="9"
         />
         <path
+          className="solapa"
           d="
           M 10,20
-          L 15,50
+          Q 15,50 15,50
           Q 50,55 85,50
-          L 90,20
+          Q 90,20 90,20
           "
           fill="none"
           stroke="white"
           stroke-width="9"
         />
         <path
+          className="cierre"
           d="
           M 44,52
           L 45,45

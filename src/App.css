@@ -106,10 +106,27 @@ button.nav-button-asistente{
   font-size: 1.2em;
 }
 
-a:hover .navbar-svg path{
-  /* transform: scale(2); */
+/* a:hover .navbar-svg path{
   stroke-width: 1px;
+} */
+
+a .navbar-svg path.caja, a .navbar-svg path.mango, a .navbar-svg path.solapa, a .navbar-svg path.cierre{
+  transition: d 2s;
 }
+
+a:hover .navbar-svg path.caja{
+  d: path("M 50,66 Q 55,66 58,78 Q 42,78 42,78 Q 45,66 50,66 Q 50,66 50,66 Q 50,66 50,66");
+}
+a:hover .navbar-svg path.mango{
+  d: path("M 35,30 Q 50,-10 65,30 Q 50,35 35,30 Q 50,-10 65,30");
+}
+a:hover .navbar-svg path.solapa{
+  d: path("M 47,33 Q 50,20 53,33 Q 53,33 53,33 Q 53,33 53,33");
+}
+a:hover .navbar-svg path.cierre{
+  d: path("M 50,66 L 50,30 Q 50,30 50,30 L 50,30");
+}
+
 
 a.nav-link{
   display: flex;
