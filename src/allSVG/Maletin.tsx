@@ -4,7 +4,7 @@ const Maletin = () => {
   return (
     <svg
         viewBox="0 0 100 80"
-        width="20"
+        width="26"
         className="navbar-svg"
     >
         <path
@@ -19,7 +19,7 @@ const Maletin = () => {
           "
           fill="none"
           stroke="white"
-          stroke-width="9"
+          stroke-width="3"
         />
         <path
           className="mango"
@@ -31,7 +31,7 @@ const Maletin = () => {
           "
           fill="none"
           stroke="white"
-          stroke-width="9"
+          stroke-width="3"
         />
         <path
           className="solapa"
@@ -43,7 +43,7 @@ const Maletin = () => {
           "
           fill="none"
           stroke="white"
-          stroke-width="9"
+          stroke-width="3"
         />
         <path
           className="cierre"
@@ -55,7 +55,7 @@ const Maletin = () => {
           "
           fill="none"
           stroke="white"
-          stroke-width="9"
+          stroke-width="3"
         />
 </svg>
   )

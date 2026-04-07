@@ -307,6 +307,37 @@ svg.flecha-hero{
   rotate: -18deg;
 }
 
+@keyframes textoAnimado {
+  0% {
+    rotate: 18deg;
+  }
+  79% {
+    rotate: 18deg;
+    scale: 1;
+  }
+  80% {
+    rotate: 13deg;
+    scale: 1.2;
+  }
+  90% {
+    rotate: 25deg;
+  }
+  100% {
+    scale: 1;
+    rotate: 18deg;
+  }
+}
+
+svg.flecha-hero-texto{
+  position: absolute;
+  width: 6em;
+  right: 8em;
+  top: 19em;
+  fill: yellow;
+  opacity: 0.9;
+  animation: textoAnimado 3s linear infinite;
+}
+
 @keyframes casinoLights {
   from {
     stroke-dashoffset: 0;

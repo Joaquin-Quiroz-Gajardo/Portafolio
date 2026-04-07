@@ -5,6 +5,13 @@ import perfil from "./imagen-perfil-comprimida.png"
 import "./App.css";
 import { useState } from "react";
 import Maletin from "./allSVG/Maletin";
+import Ampolleta from "./allSVG/Ampolleta";
+import Carta from "./allSVG/Carta";
+import Persona from "./allSVG/Persona";
+import SimbolNode from "./allSVG/SimbolNode";
+import SimbolPython from "./allSVG/SimbolPython";
+import SimbolReact from "./allSVG/SimbolReact";
+import SimbolTensorFlow from "./allSVG/SimbolTensorFlow";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -13,8 +20,9 @@ function App() {
   };
   const textStyle = {
     fontFamily: "roboto",
-    fontSize: '8px',
-    fill: 'black'}
+    fontSize: '14px',
+    fill: 'yellow'
+  }
   
   return (
     <div className="App">
@@ -26,17 +34,16 @@ function App() {
               <a className="navbar-brand" href="#">Joaquin Quiroz</a>
               <ul className={displayNavLinks?"navbar-ul display-nav-links":"navbar-ul"}>
                 <li className="nav-item">
-                  <a className="nav-link" href="#about-me-title">Acerca de mi</a>
+                  <a className="nav-link" href="#about-me-title"><Persona></Persona> <p>Acerca de mi</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <Maletin></Maletin> <p>Trabajos</p></a>
+                  <a className="nav-link" href="#"><Maletin></Maletin> <p>Trabajos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">Proyectos</a>
+                  <a className="nav-link"><Ampolleta></Ampolleta> <p>Proyectos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">Contacto</a>
+                  <a className="nav-link"><Carta></Carta><p>Contacto</p></a>
                 </li>
                 <li className="nav-item">
                   <button className="nav-button-asistente">Asistente virtual</button>
@@ -57,23 +64,38 @@ function App() {
             <h1 className="descripcion">Especialista en inteligencia artificial</h1>
             <h2 className="subtitulo">Universidad de Buenos Aires</h2>
           </div>
-          <svg className="flecha-hero" viewBox="0 0 100 400">
-            <polygon
-              points="
-                50,0
-                0,80
-                40,40
-                40,400
-                50, 400
-                60,40
-                100, 80
-              "/>
-          </svg>
-          {/* <svg viewBox="0 0 200 200">
-      <text x="100" y="100" style={textStyle}>
-        Hello React!
+          <svg
+  viewBox="0 0 100 100"
+  width="26"
+  className="flecha-hero"
+  pathLength="100"
+>
+
+  <path
+    className="flecha-cuerpo"
+    d="
+    M 75,0
+    L 100,35 
+    L 80,25 
+    Q 75,80 15,100 
+    L 0,85 
+    Q 60,65 60,16 
+    L 40,8 75,0
+    "
+    fill="none"
+    stroke="white"
+    stroke-width="2"
+  />
+  </svg>
+          <svg 
+          viewBox="35 13 60 60"
+          className="flecha-hero-texto"
+          >
+      <text x="0" y="50" style={textStyle}>
+      <tspan x="30" y="25">¡Pruébalo</tspan>
+      <tspan x="40" y="40">ahora!</tspan>
       </text>
-    </svg> */}
+    </svg>
         </div>
       </section>
 
@@ -85,12 +107,12 @@ function App() {
             <div className="contenedor-cubo">
               <div className="cubo scene">
                 <div className="cubo object">
-                  <div className="face front">frente</div>
-                  <div className="face right">derecha</div>
-                  <div className="face back">atras</div>
-                  <div className="face left">izquierda</div>
-                  <div className="face top">arriba</div>
-                  <div className="face bottom">abajo</div>
+                  <div className="face front"><SimbolPython></SimbolPython></div>
+                  <div className="face right"><SimbolReact></SimbolReact></div>
+                  <div className="face back"><SimbolNode></SimbolNode></div>
+                  <div className="face left"><SimbolTensorFlow></SimbolTensorFlow></div>
+                  <div className="face top"></div>
+                  <div className="face bottom"></div>
                 </div>
               </div>
             </div>
@@ -114,6 +136,28 @@ function App() {
           <div className="trabajos-titulo-contenido">
             <article className="trabajo-clasificador-consumo-finalidades-contenedor">
               <h3 className="trabajo-clasificador-consumo-finalidades-titulo">clasificador finalidades</h3>
+
+<svg
+  viewBox="0 34 100 32"
+  width="26"
+  className="navbar-svg"
+>
+
+  <path
+    className="cuerpo"
+    d="
+    M 0,40
+    Q 50,30 100,40 
+    L 100,60 
+    Q 50,70 0,60 
+    L 0,40
+    "
+    fill="none"
+    stroke="red"
+    stroke-width="0.5"
+  />
+  </svg>
+
               <p className="trabajo-descripcion">
                 Clasificador de texto, consumo por finalidades, datos de texto que tienen que entrar en mas de 90 categorias. accouracy mejoro de 0.86 a 0.93.
               </p>
