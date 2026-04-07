@@ -101,6 +101,18 @@ a.navbar-brand{
 button.nav-button-asistente{
   padding: 0.7em;
   background-color: yellow;
+  background-image: linear-gradient(
+    220deg,
+    hsl(75deg 63% 63%) 0%,
+    hsl(72deg 67% 62%) 13%,
+    hsl(69deg 70% 61%) 25%,
+    hsl(66deg 73% 59%) 37%,
+    hsl(64deg 75% 58%) 50%,
+    hsl(61deg 78% 56%) 63%,
+    hsl(59deg 84% 55%) 75%,
+    hsl(57deg 92% 54%) 87%,
+    hsl(55deg 100% 50%) 100%
+  );
   color: black;
   border-radius: 2em;
   font-size: 1.2em;
@@ -115,17 +127,123 @@ a .navbar-svg path.caja, a .navbar-svg path.mango, a .navbar-svg path.solapa, a 
 }
 
 a:hover .navbar-svg path.caja{
-  d: path("M 50,66 Q 55,66 58,78 Q 42,78 42,78 Q 45,66 50,66 Q 50,66 50,66 Q 50,66 50,66");
+  d: path("M 50,78 Q 62,70 62,70 Q 55,20 55,20 Q 45,20 45,20 Q 38,70 38,70 Q 50,78 50,78");
 }
 a:hover .navbar-svg path.mango{
-  d: path("M 35,30 Q 50,-10 65,30 Q 50,35 35,30 Q 50,-10 65,30");
+  d: path("M 55,18 Q 62,3 62,3 Q 38,3 38,3 Q 45,18 45,18");
 }
 a:hover .navbar-svg path.solapa{
-  d: path("M 47,33 Q 50,20 53,33 Q 53,33 53,33 Q 53,33 53,33");
+  d: path("M 38,3 Q 45,17 45,17 Q 55,17 55,17 Q 62,3 62,3");
 }
 a:hover .navbar-svg path.cierre{
-  d: path("M 50,66 L 50,30 Q 50,30 50,30 L 50,30");
+  d: path("M 58,70 L 52,25 Q 52,25 52,25 L 52,25");
 }
+
+/* ampolleta */
+
+a .navbar-svg path.destello-ampolleta-1{
+  transition: d 2s;
+  transition-delay: 0s;
+}
+a:hover .navbar-svg path.destello-ampolleta-1{
+  d: path("M 50,2 L 50,10");
+}
+a .navbar-svg path.destello-ampolleta-2{
+  transition: d 2s;
+  transition-delay: 0.2s;
+}
+a:hover .navbar-svg path.destello-ampolleta-2{
+  d: path("M 70,15 L 75,8");
+}
+a .navbar-svg path.destello-ampolleta-3{
+  transition: d 2s;
+  transition-delay: 0.4s;
+}
+a:hover .navbar-svg path.destello-ampolleta-3{
+  d: path("M 30,15 L 25,8");
+}
+a .navbar-svg path.destello-ampolleta-4{
+  transition: d 2s;
+  transition-delay: 0.6s;
+}
+a:hover .navbar-svg path.destello-ampolleta-4{
+  d: path("M 20,30 L 10,25");
+}
+a .navbar-svg path.destello-ampolleta-5{
+  transition: d 2s;
+  transition-delay: 0.8s;
+}
+a:hover .navbar-svg path.destello-ampolleta-5{
+  d: path("M 80,30 L 90,25");
+}
+
+/* carta */
+
+a .navbar-svg path.base-carta{
+  transition: d 2s;
+  transition-delay: 0s;
+}
+a:hover .navbar-svg path.base-carta{
+  d: path("M 2,78 L 98,78 L 98,45 L 2,45 L 2,78 L 98,78");
+}
+a .navbar-svg path.cierre-carta{
+  transition: d 2s;
+  transition-delay: 0.2s;
+}
+a:hover .navbar-svg path.cierre-carta{
+  d: path("M 6,45 L 6,2 L 94,2 L 94,45");
+}
+a .navbar-svg path.linea-primera-carta{
+  transition: d 2s;
+  transition-delay: 0.4s;
+}
+a:hover .navbar-svg path.linea-primera-carta{
+  d: path("M 10,15 L 90,15");
+}
+a .navbar-svg path.linea-segunda-carta{
+  transition: d 2s;
+  transition-delay: 0.6s;
+}
+a:hover .navbar-svg path.linea-segunda-carta{
+  d: path("M 10,25 L 80,25");
+}
+a .navbar-svg path.linea-tercera-carta{
+  transition: d 2s;
+  transition-delay: 0.8s;
+}
+a:hover .navbar-svg path.linea-tercera-carta{
+  d: path("M 10,35 L 87,35");
+}
+
+/* persona */
+
+a .navbar-svg ellipse.cabeza{
+  transition: cx 2s, cy 2s, rx 2s, ry 2s;
+  transition-delay: 0s;
+}
+a:hover .navbar-svg ellipse.cabeza{
+  cx: 50px;
+  cy:40px;
+  rx:45px; 
+  ry:35px;
+  }
+a .navbar-svg path.cuerpo{
+  transition: d 2s;
+  transition-delay: 0.2s;
+}
+a:hover .navbar-svg path.cuerpo{
+  d: path("M 50,25 Q 50,70 50,70 L 50,70 Q 50,70 50,70");
+}
+a .navbar-svg path.punto{
+  transition: cx 2s, cy 2s, rx 2s, ry 2s;
+  transition-delay: 0.4s;
+}
+a:hover .navbar-svg ellipse.punto{
+  cx:50px;
+  cy:15px;
+  rx:5px; 
+  ry:5px;
+  }
 
 
 a.nav-link{
@@ -183,15 +301,27 @@ h2.subtitulo{
 svg.flecha-hero{
   
   position: absolute;
-  height: 20em;
-  right: 6em;
-  top: 6em;
-  rotate: 8deg;
+  width: 10em;
+  right: 4em;
+  top: 7em;
+  rotate: -18deg;
+}
+
+@keyframes casinoLights {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+svg.flecha-hero path{
   stroke: yellow;
-    stroke-width: 5px;
-    stroke-dasharray: 0, 10, 25, 10;
-    stroke-linecap: round;
-    fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  fill: rgba(251, 232, 2, 0.15);
+  stroke-dasharray: 20, 14;
+animation: casinoLights 3s linear infinite;
 }
 
 
@@ -297,7 +427,41 @@ cubo.scene{
 
 /* trabajos */
 
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+.trabajos-titulo {
+  animation: reveal linear forwards;
+  /* Link animation to the element's visibility in the viewport */
+  animation-timeline: view();
+  /* Start when the top of the element enters the bottom of the viewport, 
+     finish when it is fully contained */
+  animation-range: entry 10% cover 30%;
+}
+
+@keyframes redondear {
+  from { d: "M 0,40 Q 100,40 100,40  L 100,60  Q 0,60 0,60  L 0,40"; stroke: green;}
+  to { d: "M 0,40 Q 50,30 100,40  L 100,60  Q 50,70 0,60  L 0,40"; stroke: yellow; }
+}
+
+article > svg {
+  width: 100%;
+}
+
+article > svg > path {
+  stroke: blue;
+  d: "M 0,40 Q 100,40 100,40  L 100,60  Q 0,60 0,60  L 0,40";
+  stroke: green;
+  animation: redondear linear forwards;
+
+  /* Link animation to the element's visibility in the viewport */
+  animation-timeline: view();
+  /* Start when the top of the element enters the bottom of the viewport, 
+     finish when it is fully contained */
+  animation-range: entry 10% cover 30%;
+}
 
 /* proyectos */
 
