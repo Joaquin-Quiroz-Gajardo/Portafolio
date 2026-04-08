@@ -12,6 +12,8 @@ import SimbolNode from "./allSVG/SimbolNode";
 import SimbolPython from "./allSVG/SimbolPython";
 import SimbolReact from "./allSVG/SimbolReact";
 import SimbolTensorFlow from "./allSVG/SimbolTensorFlow";
+import Home from "./allSVG/Home";
+import VerMas from "./allSVG/VerMas";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -29,21 +31,21 @@ function App() {
 
       {/* navbar */}
       <header>
-        <nav className="navbar">
+        <nav id="navbar" className="navbar">
             <div className="navbar-collapse">
-              <a className="navbar-brand" href="#">Joaquin Quiroz</a>
+              <a className="navbar-brand" href="#"><Home></Home> <p>Inicio</p></a>
               <ul className={displayNavLinks?"navbar-ul display-nav-links":"navbar-ul"}>
                 <li className="nav-item">
                   <a className="nav-link" href="#about-me-title"><Persona></Persona> <p>Acerca de mi</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"><Maletin></Maletin> <p>Trabajos</p></a>
+                  <a className="nav-link" href="#trabajos"><Maletin></Maletin> <p>Trabajos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link"><Ampolleta></Ampolleta> <p>Proyectos</p></a>
+                  <a className="nav-link" href="#proyectos"><Ampolleta></Ampolleta> <p>Proyectos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link"><Carta></Carta><p>Contacto</p></a>
+                  <a className="nav-link" href="#contacto"><Carta></Carta><p>Contacto</p></a>
                 </li>
                 <li className="nav-item">
                   <button className="nav-button-asistente">Asistente virtual</button>
@@ -130,33 +132,13 @@ function App() {
 
 
       {/* trabajos */}
-      <section>
-        <div className="trabajos">
+      <section className="contenido">
+        <div id="trabajos" className="trabajos">
           <h2 className="trabajos-titulo">Trabajos</h2>
           <div className="trabajos-titulo-contenido">
             <article className="trabajo-clasificador-consumo-finalidades-contenedor">
               <h3 className="trabajo-clasificador-consumo-finalidades-titulo">clasificador finalidades</h3>
 
-<svg
-  viewBox="0 34 100 32"
-  width="26"
-  className="navbar-svg"
->
-
-  <path
-    className="cuerpo"
-    d="
-    M 0,40
-    Q 50,30 100,40 
-    L 100,60 
-    Q 50,70 0,60 
-    L 0,40
-    "
-    fill="none"
-    stroke="red"
-    stroke-width="0.5"
-  />
-  </svg>
 
               <p className="trabajo-descripcion">
                 Clasificador de texto, consumo por finalidades, datos de texto que tienen que entrar en mas de 90 categorias. accouracy mejoro de 0.86 a 0.93.
@@ -169,7 +151,7 @@ function App() {
               <p className="trabajo-descripcion">
                 Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
               </p>
-              <button>ver mas</button>
+              <button><VerMas></VerMas></button>
             </article>
             <article className="trabajo-google-news-contenedor">
               <h3 className="trabajo-google-news-titulo">google news</h3>
@@ -191,15 +173,15 @@ function App() {
 
 
       {/* proyectos */}
-      <section>
-        <div className="proyectos">
+      <section className="contenido">
+        <div id="proyectos" className="proyectos">
           <h2 className="proyectos-titulo">Proyectos</h2>
           <div className="proyectos-contenido">
             <article className="proyecto-active-learinig">
-              <h2>active learinig</h2>
+              <h3>active learinig</h3>
             </article>
             <article className="proyecto-pila">
-              <h2>detector de pilas en vertederos</h2>
+              <h3>detector de pilas en vertederos</h3>
             </article>
           </div>
         </div>
@@ -207,7 +189,7 @@ function App() {
 
 
       {/* habilidades */}
-      <section>
+      <section className="contenido">
         <div className="habilidades">
           <h2 className="habilidades-titulo">Habilidades</h2>
           <div className="habilidades-lenguajes-contenedor">
@@ -234,7 +216,6 @@ function App() {
               <li>EC2</li>
               <li>Lambda</li>
               <li>RDS</li>
-              <li>React</li> 
             </ul>
           </div>
           <div className="habilidades-lenguajes-contenedor">
@@ -250,7 +231,7 @@ function App() {
 
       {/* contacto */}
       <footer>
-        <div className="contacto">
+        <div id="contacto" className="contacto">
           <h2 className="contacto-titulo">Contacto</h2>
           <form action="POST" className="contacto-form">
             <label htmlFor="input-nombre">Nombre: </label>

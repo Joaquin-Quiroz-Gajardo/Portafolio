@@ -25,6 +25,13 @@ nav.navbar{
 a.navbar-brand{
   position: relative;
   left: 2em;
+  display: flex;
+  gap: 0.5em;
+  z-index: 20;
+}
+
+.home{
+  width: 1.7em;
 }
 
 .navbar-collapse{
@@ -138,6 +145,25 @@ a:hover .navbar-svg path.solapa{
 a:hover .navbar-svg path.cierre{
   d: path("M 58,70 L 52,25 Q 52,25 52,25 L 52,25");
 }
+
+/* home */
+
+
+a .home path.chimenea{
+  transition: d 2s;
+  transition-delay: 0.2s;
+}
+a:hover .home path.chimenea{
+  d: path("M 70,19 L 70,7 80,7 80,25 ");
+}
+a .home path.ventana{
+  transition: d 2s;
+  transition-delay: 0.4s;
+}
+a:hover .home path.ventana{
+  d: path("M 40,18 L 52,18 52,36 40,36 40,18 52,18 M 58,24 L 58,36 68,36 68,24 58,24 58,36");
+}
+
 
 /* ampolleta */
 
@@ -279,7 +305,23 @@ img.perfil{
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background-color: blue;
-  border: 8px solid blue;
+  background-image: linear-gradient(
+    120deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(239deg 94% 22%) 8%,
+    hsl(238deg 89% 23%) 17%,
+    hsl(237deg 83% 25%) 25%,
+    hsl(236deg 79% 26%) 33%,
+    hsl(236deg 76% 28%) 42%,
+    hsl(235deg 73% 29%) 50%,
+    hsl(234deg 70% 31%) 58%,
+    hsl(233deg 68% 32%) 67%,
+    hsl(232deg 66% 34%) 75%,
+    hsl(232deg 65% 35%) 83%,
+    hsl(231deg 63% 37%) 92%,
+    hsl(230deg 62% 38%) 100%
+  );
+  border: 2px solid black;
   width: 200px;
   filter: sepia(0.2);
   
@@ -456,46 +498,94 @@ cubo.scene{
 
 
 
+/* trabajos, proyectos y habilidades */
+
+section.contenido{
+  --shadow-color: 206deg 28% 59%;
+  background-color: #e3f2fd;
+}
+section.contenido, footer{
+  padding: 2em;
+  padding-top: 8em;
+}
+
+
+h2 {
+  font-size: 3em;
+  color: #0d47a1;
+  margin-bottom: 1em;
+  margin-left: 0.4em;
+}
+
+h3 {
+  font-size: 2em;
+  color: #01161e;
+  margin-bottom: 0.8em;
+}
+
 /* trabajos */
 
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
+div.trabajos-titulo-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+}
+div.trabajos-titulo-contenido h3{
+  padding: 0.8em;
+}
+div.trabajos-titulo-contenido p{
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 1em;
+  font-size: 1.2em;
+  text-align: left;
 }
 
-.trabajos-titulo {
-  animation: reveal linear forwards;
-  /* Link animation to the element's visibility in the viewport */
-  animation-timeline: view();
-  /* Start when the top of the element enters the bottom of the viewport, 
-     finish when it is fully contained */
-  animation-range: entry 10% cover 30%;
+div.trabajos-titulo-contenido article{
+  background-color: #fff;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+    border-radius: 1em;
+}
+div.trabajos-titulo-contenido article button{
+  align-items: center;
+  background-color: transparent;
+  border: none;  
+  padding: 1em;
+}
+div.trabajos-titulo-contenido article button svg{
+  width: 4em;
 }
 
-@keyframes redondear {
-  from { d: "M 0,40 Q 100,40 100,40  L 100,60  Q 0,60 0,60  L 0,40"; stroke: green;}
-  to { d: "M 0,40 Q 50,30 100,40  L 100,60  Q 50,70 0,60  L 0,40"; stroke: yellow; }
+div.trabajos-titulo-contenido article button svg path{
+  stroke-width: 0.5em;
+  stroke: #1565c0;
 }
 
-article > svg {
-  width: 100%;
+div.trabajos-titulo-contenido article button svg path.barra-centro{
+  transition: d 2s;
+  transition-delay: 0s;
+}
+div.trabajos-titulo-contenido article button:hover svg path.barra-centro{
+  d: path("M 50,0 L 50,98");
+}
+div.trabajos-titulo-contenido article button svg path.cabeza-flecha{
+  transition: d 2s;
+  transition-delay: 0.2s;
+}
+div.trabajos-titulo-contenido article button:hover svg path.cabeza-flecha{
+  d: path("M 90,70 L 50,98 10,70 ");
 }
 
-article > svg > path {
-  stroke: blue;
-  d: "M 0,40 Q 100,40 100,40  L 100,60  Q 0,60 0,60  L 0,40";
-  stroke: green;
-  animation: redondear linear forwards;
-
-  /* Link animation to the element's visibility in the viewport */
-  animation-timeline: view();
-  /* Start when the top of the element enters the bottom of the viewport, 
-     finish when it is fully contained */
-  animation-range: entry 10% cover 30%;
-}
 
 /* proyectos */
 
 
 /* habilidades */
+
+
+/* contacto */
 
