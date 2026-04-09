@@ -16,6 +16,14 @@ import Home from "./allSVG/Home";
 import VerMas from "./allSVG/VerMas";
 import Caso from "./Components/Caso";
 import Time from "./allSVG/Time";
+import Goods from "./allSVG/Goods";
+import FondoContent from "./allSVG/FondoContent";
+import Diario from "./allSVG/Diario";
+import Science from "./allSVG/Science";
+import FondoContentAlternativo from "./allSVG/FondoContentAlternativo";
+import Network from "./allSVG/Network";
+import Pilas from "./allSVG/Pilas";
+import Bot from "./allSVG/Bot";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -138,36 +146,39 @@ function App() {
         <div id="trabajos" className="trabajos">
           <h2 className="trabajos-titulo">Trabajos</h2>
           <div className="trabajos-titulo-contenido">
-            <article className="trabajo-clasificador-consumo-finalidades-contenedor">
-              <h3 className="trabajo-clasificador-consumo-finalidades-titulo">clasificador finalidades</h3>
-
-
-              <p className="trabajo-descripcion">
-                Clasificador de texto, consumo por finalidades, datos de texto que tienen que entrar en mas de 90 categorias. accouracy mejoro de 0.86 a 0.93.
-              </p>
-              <button>ver mas</button>
-              <p className="ver-mas">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint eaque modi amet earum natus assumenda rem ullam recusandae ipsa delectus.</p>
-            </article> 
+            <Caso 
+              titulo="clasificador finalidades" 
+              bajada="Clasificador de texto, consumo por finalidades, datos de texto que tienen que entrar en mas de 90 categorias. accouracy mejoro de 0.86 a 0.93." 
+              imagen={<Goods></Goods>}
+              fondo={<FondoContent></FondoContent>}
+              >
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quae eius voluptatum maxime dolorum aliquid veniam earum ipsa illum hic ab eligendi mollitia vero, alias inventore ducimus deserunt id aliquam.</p>
+            </Caso>
             <Caso 
               titulo="prospectivo-retrospectivo" 
               bajada="Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93." 
-              imagen={<Time></Time>}>
+              imagen={<Time></Time>}
+              fondo={<FondoContent></FondoContent>}
+              >
               <p>mas contenido que tenemos</p>
             </Caso>
-            <article className="trabajo-google-news-contenedor">
-              <h3 className="trabajo-google-news-titulo">google news</h3>
-              <p className="trabajo-descripcion">
-                extraccion de datos de google news, noticias de conflictos ambientales.
-              </p>
-              <button>ver mas</button>
-            </article>
-            <article className="trabajo-science-direct-contenedor">
-              <h3 className="trabajo-science-direct-titulo">science direct</h3>
-              <p className="trabajos-descripcion">
-                extraccion de articulos academicos de relaves mineros. mas articulos prospectivos que retrospectivos.
-              </p>
-              <button>ver mas</button>
-            </article>
+            <Caso 
+              titulo="Google news" 
+              bajada="extraccion de datos de google news, noticias de conflictos ambientales." 
+              imagen={<Diario></Diario>}
+              fondo={<FondoContent></FondoContent>}
+              >
+              <p>mas contenido que tenemos</p>
+            </Caso>
+            <Caso 
+              titulo="Science direct" 
+              bajada="extraccion de articulos academicos de relaves mineros. mas articulos prospectivos que retrospectivos." 
+              imagen={<Science></Science>}
+              fondo={<FondoContent></FondoContent>}
+              >
+              <p>mas contenido que tenemos</p>
+            </Caso>
+
           </div>
         </div>
       </section>
@@ -178,12 +189,32 @@ function App() {
         <div id="proyectos" className="proyectos">
           <h2 className="proyectos-titulo">Proyectos</h2>
           <div className="proyectos-contenido">
-            <article className="proyecto-active-learinig">
-              <h3>active learinig</h3>
-            </article>
-            <article className="proyecto-pila">
-              <h3>detector de pilas en vertederos</h3>
-            </article>
+            <Caso 
+              titulo="Active learning" 
+              bajada="Algo" 
+              imagen={<Network></Network>}
+              fondo={<FondoContentAlternativo></FondoContentAlternativo>}
+              >
+              <p>mas contenido que tenemos</p>
+            </Caso>
+
+            <Caso 
+              titulo="Detector de pilas en vertederos" 
+              bajada="algo" 
+              imagen={<Pilas></Pilas>}
+              fondo={<FondoContentAlternativo></FondoContentAlternativo>}
+              >
+              <p>mas contenido que tenemos</p>
+            </Caso>
+
+            <Caso 
+              titulo="RAG agent" 
+              bajada="algo" 
+              imagen={<Bot></Bot>}
+              fondo={<FondoContentAlternativo></FondoContentAlternativo>}
+              >
+              <p>mas contenido que tenemos</p>
+            </Caso>
           </div>
         </div>
       </section>
@@ -191,8 +222,8 @@ function App() {
 
       {/* habilidades */}
       <section className="contenido">
-        <div className="habilidades">
           <h2 className="habilidades-titulo">Habilidades</h2>
+        <div className="habilidades">
           <div className="habilidades-lenguajes-contenedor">
             <h3 className="habilidades-lenguaje-titulo">Lenguales</h3>
             <ul>
@@ -242,7 +273,8 @@ function App() {
             <input type="text" id="input-email" />
             
             <label htmlFor="input-mensaje">Mensaje: </label>
-            <input type="text" id="input-mensaje" />
+            <input type="text" id="input-mensaje"/>
+            <button>Enviar</button>
           </form>
         </div>
       </footer>

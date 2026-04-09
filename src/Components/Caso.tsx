@@ -8,6 +8,7 @@ type CasoTypes = {
   titulo: string
   imagen: React.JSX.Element 
   children: ReactNode
+  fondo: React.JSX.Element 
 }
 
 const Caso = (props: CasoTypes) => {
@@ -23,7 +24,7 @@ const Caso = (props: CasoTypes) => {
       </h3>
       <div className="bajada-content">
         <div className="image-content">
-          <FondoContent></FondoContent>
+          {props.fondo}
         <div className="centro-imagen">
           {props.imagen}
         </div>

@@ -608,7 +608,7 @@ article h3{
   color: #003566;
 }
 
-div.trabajos-titulo-contenido {
+div.trabajos-titulo-contenido, div.proyectos-contenido {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -671,6 +671,83 @@ article button:hover svg path.cabeza-flecha{
 
 /* habilidades */
 
+div.habilidades{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.habilidades h3{
+  text-decoration: underline;
+}
+
+div.habilidades div{
+  background-color: #fdf8e1;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  border-radius: 1em;
+  width: 20em;
+  height: 18em;
+  padding: 2em;
+  margin: 2em;
+}
+
+div.habilidades div li{
+  font-size: 1.3em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 /* contacto */
 
+
+div.contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.contacto-form{
+  margin-top: 3em;
+  font-size: 1.6em;
+  padding: 2em;
+  max-width: 40em;
+  --shadow-color: 0deg 0% 63%;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  box-sizing: border-box; /* */
+  transition: border-color 0.3s ease; /* */
+}
+
+input[type="text"]:focus {
+  border: 1px solid #4CAF50;
+  outline: none; /* Remember to provide alternative focus styling */
+  box-shadow: 0 0 5px #1e96fcaa;
+}
+
+form.contacto-form button{
+  padding: 0.7em;
+  background-color: lightblue;
+  color: black;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+  width: 8em;
+  display: block;
+  margin: 0 auto;
+}
