@@ -14,6 +14,7 @@ import SimbolReact from "./allSVG/SimbolReact";
 import SimbolTensorFlow from "./allSVG/SimbolTensorFlow";
 import Home from "./allSVG/Home";
 import VerMas from "./allSVG/VerMas";
+import Caso from "./Components/Caso";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -146,13 +147,7 @@ function App() {
               <button>ver mas</button>
               <p className="ver-mas">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint eaque modi amet earum natus assumenda rem ullam recusandae ipsa delectus.</p>
             </article>
-            <article className="trabajo-clasificador-active-learning-creacion-base-etiquetada-contenedor">
-              <h3 className="trabajo-clasificador-active-creacion-base-etiquetada-titulo">prospectivo-retrospectivo</h3>
-              <p className="trabajo-descripcion">
-                Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
-              </p>
-              <button><VerMas></VerMas></button>
-            </article>
+            <Caso></Caso>
             <article className="trabajo-google-news-contenedor">
               <h3 className="trabajo-google-news-titulo">google news</h3>
               <p className="trabajo-descripcion">
