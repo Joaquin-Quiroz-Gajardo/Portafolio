@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import VerMas from '../allSVG/VerMas'
+import FondoContent from '../allSVG/FondoContent'
+import Time from '../allSVG/Time'
 
 const Caso = () => {
 
@@ -12,9 +14,17 @@ const Caso = () => {
       <h3 className="trabajo-clasificador-active-creacion-base-etiquetada-titulo">
         prospectivo-retrospectivo
       </h3>
-      <p className="trabajo-descripcion">
-        Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
-      </p>
+      <div className="bajada-content">
+        <div className="image-content">
+          <FondoContent></FondoContent>
+          <div className="centro-imagen">
+            <Time></Time>
+          </div>
+        </div>
+        <p className="trabajo-descripcion">
+          Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
+        </p>
+      </div>
       <div className={displayArticle?"mas-contenido":"mas-contenido no-display"}>
         <p>mas contenido que tenemos</p>
       </div>

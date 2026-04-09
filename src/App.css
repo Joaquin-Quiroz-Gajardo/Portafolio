@@ -522,6 +522,77 @@ h3 {
   color: #01161e;
   margin-bottom: 0.8em;
 }
+.imagen-container{
+  width: 13em;
+  padding: 1em;
+  padding-left: 3em;
+}
+
+.image-content{
+  position: relative;
+}
+
+.centro-imagen svg{
+  width: 5.5em;
+  height: 5.5em;
+  position: absolute;
+  z-index: 20px;
+  bottom: 2.7em;
+    right: 2.4em;
+  /* bottom: 12em; */
+}
+
+@keyframes cambio-posicion-1 {
+  25%{
+    x: 0px;
+    y: 15px;
+  }
+  50%{
+    x: 15px;
+    y: 15px;
+  }
+  75%{
+    x: 15px;
+    y: 0px;
+  }
+  100%{
+    x: 0px;
+    y: 0px;
+  }
+}
+
+.rect1{
+  animation: cambio-posicion-1 10s infinite alternate ease-in-out;
+}
+
+@keyframes cambio-posicion-2 {
+  25%{
+    x: 15px;
+    y: 0px;
+  }
+  50%{
+    x: 0px;
+    y: 0px;
+  }
+  75%{
+    x: 0px;
+    y: 15px;
+  }
+  100%{
+    x: 15px;
+    y: 15px;
+  }
+}
+
+.rect2{
+  animation: cambio-posicion-2 10s infinite alternate ease-in-out;
+}
+
+
+.bajada-content{
+  display: flex;
+  align-items: center;
+}
 
 /* trabajos */
 
