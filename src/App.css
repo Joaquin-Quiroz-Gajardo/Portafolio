@@ -594,7 +594,19 @@ h3 {
   align-items: center;
 }
 
-/* trabajos */
+article p{
+  font-size: 1.4em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 1em;
+  text-align: left;
+  color: #000814;
+}
+
+article h3{
+  padding: 0.8em;
+  color: #003566;
+}
 
 div.trabajos-titulo-contenido {
   display: flex;
@@ -602,18 +614,8 @@ div.trabajos-titulo-contenido {
   gap: 2em;
   text-align: center;
 }
-div.trabajos-titulo-contenido h3{
-  padding: 0.8em;
-}
-div.trabajos-titulo-contenido p{
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  padding-bottom: 1em;
-  font-size: 1.2em;
-  text-align: left;
-}
 
-div.trabajos-titulo-contenido article{
+article{
   background-color: #fff;
   box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
     0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
@@ -621,33 +623,33 @@ div.trabajos-titulo-contenido article{
     5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
     border-radius: 1em;
   }
-div.trabajos-titulo-contenido article button{
+article button{
   align-items: center;
   background-color: transparent;
   border: none;  
   padding: 1em;
 }
-div.trabajos-titulo-contenido article button svg{
+article button svg{
   width: 4em;
 }
 
-div.trabajos-titulo-contenido article button svg path{
+article button svg path{
   stroke-width: 0.5em;
   stroke: #1565c0;
 }
 
-div.trabajos-titulo-contenido article button svg path.barra-centro{
+article button svg path.barra-centro{
   transition: d 2s;
   transition-delay: 0s;
 }
-div.trabajos-titulo-contenido article button:hover svg path.barra-centro{
+article button:hover svg path.barra-centro{
   d: path("M 65,15 L 65,113");
 }
-div.trabajos-titulo-contenido article button svg path.cabeza-flecha{
+article button svg path.cabeza-flecha{
   transition: d 2s;
   transition-delay: 0.2s;
 }
-div.trabajos-titulo-contenido article button:hover svg path.cabeza-flecha{
+article button:hover svg path.cabeza-flecha{
   d: path("M 105,85 L 65,113 25,85 ");
 }
 
@@ -661,6 +663,8 @@ div.trabajos-titulo-contenido article button:hover svg path.cabeza-flecha{
 .no-display{
   display: none;
 }
+/* trabajos */
+
 
 /* proyectos */
 

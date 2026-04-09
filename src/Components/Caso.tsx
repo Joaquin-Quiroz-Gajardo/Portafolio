@@ -17,10 +17,10 @@ const Caso = () => {
       <div className="bajada-content">
         <div className="image-content">
           <FondoContent></FondoContent>
-          <div className="centro-imagen">
-            <Time></Time>
-          </div>
+        <div className="centro-imagen">
+          <Time></Time>
         </div>
+      </div>
         <p className="trabajo-descripcion">
           Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
         </p>
