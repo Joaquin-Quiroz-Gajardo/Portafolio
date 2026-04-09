@@ -15,6 +15,7 @@ import SimbolTensorFlow from "./allSVG/SimbolTensorFlow";
 import Home from "./allSVG/Home";
 import VerMas from "./allSVG/VerMas";
 import Caso from "./Components/Caso";
+import Time from "./allSVG/Time";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -146,8 +147,10 @@ function App() {
               </p>
               <button>ver mas</button>
               <p className="ver-mas">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint eaque modi amet earum natus assumenda rem ullam recusandae ipsa delectus.</p>
-            </article>
-            <Caso></Caso>
+            </article> 
+            <Caso bajada="Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93." imagen={<Time></Time>}>
+              <p>mas contenido que tenemos</p>
+            </Caso>
             <article className="trabajo-google-news-contenedor">
               <h3 className="trabajo-google-news-titulo">google news</h3>
               <p className="trabajo-descripcion">

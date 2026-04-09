@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { ReactNode, SVGProps, useState } from 'react'
 import VerMas from '../allSVG/VerMas'
 import FondoContent from '../allSVG/FondoContent'
 import Time from '../allSVG/Time'
 
-const Caso = () => {
+type CasoTypes = {
+  bajada: string
+  imagen: React.JSX.Element 
+  children: ReactNode
+}
+
+const Caso = (props: CasoTypes) => {
 
   const [displayArticle, setDisplayArticle] = useState<boolean>(false)
   function handlerVerMas(e: React.MouseEvent<HTMLButtonElement>){
@@ -18,15 +24,15 @@ const Caso = () => {
         <div className="image-content">
           <FondoContent></FondoContent>
         <div className="centro-imagen">
-          <Time></Time>
+          {props.imagen}
         </div>
       </div>
         <p className="trabajo-descripcion">
-          Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93.
+          {props.bajada}
         </p>
       </div>
-      <div className={displayArticle?"mas-contenido":"mas-contenido no-display"}>
-        <p>mas contenido que tenemos</p>
+      <div className={displayArticle?"mas-contenido":"mas-contenido no-display"}>        
+        {props.children}
       </div>
       <button onClick={handlerVerMas} className={displayArticle?"ver-mas rotated":"ver-mas"}>
         <VerMas ></VerMas>
