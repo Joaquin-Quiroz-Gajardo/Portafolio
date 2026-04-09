@@ -148,7 +148,10 @@ function App() {
               <button>ver mas</button>
               <p className="ver-mas">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint eaque modi amet earum natus assumenda rem ullam recusandae ipsa delectus.</p>
             </article> 
-            <Caso bajada="Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93." imagen={<Time></Time>}>
+            <Caso 
+              titulo="prospectivo-retrospectivo" 
+              bajada="Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93." 
+              imagen={<Time></Time>}>
               <p>mas contenido que tenemos</p>
             </Caso>
             <article className="trabajo-google-news-contenedor">

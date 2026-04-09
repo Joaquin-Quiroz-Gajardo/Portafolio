@@ -5,6 +5,7 @@ import Time from '../allSVG/Time'
 
 type CasoTypes = {
   bajada: string
+  titulo: string
   imagen: React.JSX.Element 
   children: ReactNode
 }
@@ -18,7 +19,7 @@ const Caso = (props: CasoTypes) => {
   return (
     <article className="trabajo-clasificador-active-learning-creacion-base-etiquetada-contenedor">
       <h3 className="trabajo-clasificador-active-creacion-base-etiquetada-titulo">
-        prospectivo-retrospectivo
+        {props.titulo}
       </h3>
       <div className="bajada-content">
         <div className="image-content">
