@@ -519,6 +519,12 @@ section.contenido, footer{
   padding-top: 8em;
 }
 
+@media (max-width: 700px) {
+  .bajada-content{
+  display: flex;
+  flex-direction: column;
+}
+}
 
 h2 {
   font-size: 3em;
