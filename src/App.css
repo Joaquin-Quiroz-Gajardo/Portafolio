@@ -685,6 +685,12 @@ div.habilidades{
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 852px) {
+  div.habilidades{
+  flex-direction: column;
+  align-items: center;
+}
+}
 
 div.habilidades h3{
   text-decoration: underline;
@@ -702,6 +708,12 @@ div.habilidades div{
   padding: 2em;
   margin: 2em;
 }
+
+/* @media (max-width: 852px) {
+  div.habilidades div{
+  width: calc(100% - 4em);
+}
+} */
 
 div.habilidades div li{
   font-size: 1.3em;
