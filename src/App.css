@@ -384,6 +384,12 @@ svg.flecha-hero{
   top: 7em;
   rotate: -18deg;
 }
+@media (max-width: 670px) {
+  svg.flecha-hero, svg.flecha-hero-texto{
+  visibility: hidden;
+  /* position: fixed; */
+}
+}
 
 @keyframes textoAnimado {
   0% {
