@@ -869,6 +869,7 @@ input[type="text"] {
   /* border: 2px solid #aaa; */
   border: none;
   width: fit-content;
+  max-width: calc(100% - 3em);
 
   --shadow-color: 210deg 6% 58%;
   box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),

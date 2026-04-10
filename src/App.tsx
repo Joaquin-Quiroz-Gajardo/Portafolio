@@ -292,7 +292,7 @@ function App() {
           <div className="conversacion">
             <p className="human-message">hola</p>
             <p className="ia-message">que pasa humano</p>
-            <p className="ia-message">que pasa humano</p>
+            <p className="ia-message">que pasa humano Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eveniet provident. Harum voluptate aliquam aperiam architecto, dolor id, consequatur corrupti dolorum animi maiores, culpa est! Facere perspiciatis quo minima quod, numquam distinctio nisi amet explicabo officiis harum corrupti et pariatur similique eveniet animi aut cumque cum vel repellendus porro officia!</p>
             <p className="human-message">hola</p>
             <p className="human-message">hola</p>
             <p className="human-message">hola</p>
