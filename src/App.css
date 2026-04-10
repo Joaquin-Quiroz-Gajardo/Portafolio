@@ -751,3 +751,67 @@ form.contacto-form button{
   display: block;
   margin: 0 auto;
 }
+
+input[type="text"] {
+  font-size: 1.2em;
+}
+
+
+/* agente virtual */
+
+.reAct-agent{
+  width: 100%;
+  height: 100%;
+  background-color: #0009;
+  position: fixed;
+  z-index: 100;
+  bottom: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat{
+  background-color: #22223b;
+  width: 560px;
+  height: 400px;
+  /* padding: 3em; */
+  border-radius: 1em;
+  position: relative;
+}
+
+.chat input{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: calc(100% - 2.7em);
+}
+.chat button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background-color: lightgrey; */
+  border-radius: 1em;
+  height: 3.8em;
+  width: 3.8em;
+}
+.converzacion{
+  position: absolute;
+}
+
+.salir{
+  position: absolute;
+  z-index: 110;
+  padding-right: 509.34px;
+  background-color: red;
+  left: 0;
+}
+
+.salir button{
+  position: relative;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+}

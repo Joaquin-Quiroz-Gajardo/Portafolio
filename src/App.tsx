@@ -24,6 +24,7 @@ import FondoContentAlternativo from "./allSVG/FondoContentAlternativo";
 import Network from "./allSVG/Network";
 import Pilas from "./allSVG/Pilas";
 import Bot from "./allSVG/Bot";
+import Enviar from "./allSVG/Enviar";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -282,10 +283,19 @@ function App() {
       {/* reAct agent */}
 
       <div className="reAct-agent">
-        <h2 className="reAct-agent-titulo">Chat</h2>
-        <div className="reAct-agent-mensajes-contenedor">
-          <div className="reAct-agent-mensaje-ia">hola humano</div>
-          <div className="reAct-agent-mensaje-usuario">hola robot</div>
+        <div className="chat">
+          <div className="converzacion">
+            <div className="salir">
+              <button>X</button>
+            </div>
+
+          </div>
+          <form action="POST">
+            <input type="text" />
+            <button>
+              <Enviar></Enviar>
+            </button>
+          </form>
         </div>
       </div>
 
