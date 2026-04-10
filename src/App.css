@@ -442,10 +442,23 @@ animation: casinoLights 3s linear infinite;
 
 /* acerca de mi */
 div.about-me{
-  padding-top: 12em;
-  padding-bottom: 12em;
-  background-color: #01161e;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-color: #022b3a;
   color: #fff;
+}
+@media (max-width: 1050px) {
+  div.about-me{
+  padding-top: 2em;
+  padding-bottom: 6em;
+}
+  .contenedor-cubo{
+    transform: translateX(-5em);
+  }
+}
+
+.about-me-title-content h2{
+  color: #eee;
 }
 #about-me-title{
   text-align: center;
@@ -456,11 +469,18 @@ div.about-me{
   justify-content: space-evenly;
 }
 
+@media (max-width: 1050px) {
+  .about-me-content{
+  flex-direction: column;
+  align-items: center;
+}
+}
+
 .about-me-title-content{
   padding: 5em;
   margin: 5em;
   border-radius: 1em;
-  --shadow-color: 197deg 100% 0%;
+  --shadow-color: 197deg 100% 3%;
   box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
     1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
     2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
@@ -472,10 +492,17 @@ div.about-me{
 }
 
 
+
 /* cubo */
 
 .contenedor-cubo{
   padding: 15em;
+}
+
+@media (max-width: 1050px) {
+  .contenedor-cubo{
+  padding: 0;
+}
 }
 
 cubo.scene{
