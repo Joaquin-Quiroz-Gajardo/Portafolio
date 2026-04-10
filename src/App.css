@@ -107,6 +107,7 @@ a.navbar-brand{
   visibility: hidden;
  }
  ul.navbar-ul.display-nav-links{
+  padding-top: 3em;
   visibility: visible;
   display: flex;
   flex-direction: column;
@@ -361,6 +362,12 @@ img.perfil{
   width: 200px;
   filter: sepia(0.2);
   
+}
+
+@media (max-width: 450px) {
+  img.perfil{
+  margin-top: 6em;
+}
 }
 
 
@@ -771,11 +778,13 @@ div.habilidades div{
   margin: 2em;
 }
 
-/* @media (max-width: 852px) {
+@media (max-width: 372px) {
   div.habilidades div{
-  width: calc(100% - 4em);
+  width: 100% ;
+  /* padding: 0; */
+  margin: 2em auto 2em auto;
 }
-} */
+}
 
 div.habilidades div li{
   font-size: 1.3em;
