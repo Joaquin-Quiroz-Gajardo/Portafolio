@@ -49,19 +49,19 @@ function App() {
               <a className="navbar-brand" href="#"><Home></Home> <p>Inicio</p></a>
               <ul className={displayNavLinks?"navbar-ul display-nav-links":"navbar-ul"}>
                 <li className="nav-item">
-                  <a className="nav-link" href="#about-me-title"><Persona></Persona> <p>Acerca de mi</p></a>
+                  <a onClick={()=>{setDisplayNavLinks(false)}} className="nav-link" href="#about-me-title"><Persona></Persona> <p>Acerca de mi</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#trabajos"><Maletin></Maletin> <p>Trabajos</p></a>
+                  <a onClick={()=>{setDisplayNavLinks(false)}} className="nav-link" href="#trabajos"><Maletin></Maletin> <p>Trabajos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#proyectos"><Ampolleta></Ampolleta> <p>Proyectos</p></a>
+                  <a onClick={()=>{setDisplayNavLinks(false)}} className="nav-link" href="#proyectos"><Ampolleta></Ampolleta> <p>Proyectos</p></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contacto"><Carta></Carta><p>Contacto</p></a>
+                  <a onClick={()=>{setDisplayNavLinks(false)}} className="nav-link" href="#contacto"><Carta></Carta><p>Contacto</p></a>
                 </li>
                 <li className="nav-item">
-                  <button className="nav-button-asistente">Asistente virtual</button>
+                  <button onClick={()=>{setDisplayNavLinks(false)}} className="nav-button-asistente">Asistente virtual</button>
                 </li>
               </ul>
               <button onClick={handleDesplegarMenu} className={displayNavLinks?"menu display-nav-links":"menu"}><Menu></Menu></button>
