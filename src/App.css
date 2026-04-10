@@ -67,12 +67,22 @@ button.menu{
 
 @media (max-width: 775px) {
   nav.navbar {
-    background-color: red;
+    /* background-color: red; */
   }
   button.menu{
   display: block;
   position: relative;
   left: 2em;
+  background-color: transparent;
+  border: none;
+}
+
+path.barras{
+  transition: d 1.2s;
+}
+.display-nav-links path.barras{
+  transition: d 1.2s;
+  d: path("M 10,10 L 90,90 M -10,50 L -10,50 M 10,90 L 90,10");
 }
 a.navbar-brand{
   position: relative;
@@ -92,7 +102,7 @@ a.navbar-brand{
   top: 0;
   left: 0;
   z-index: 20;
-  background-color: blueviolet;
+  background-color: #14213df4;
   color: #fff;
  }
  button.menu{
@@ -762,7 +772,7 @@ input[type="text"] {
 .reAct-agent{
   width: 100%;
   height: 100%;
-  background-color: #0009;
+  background-color: #14213ddd;
   position: fixed;
   z-index: 100;
   bottom: 0%;
@@ -851,7 +861,7 @@ input[type="text"] {
     hsl(239deg 91% 80%) 92%,
     hsl(235deg 85% 78%) 100%
   );
-  border-radius: 2em;
+  border-radius: 1em;
   height: 4em;
   border: #aaa;
 }

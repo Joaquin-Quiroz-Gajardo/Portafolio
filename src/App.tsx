@@ -26,6 +26,7 @@ import Pilas from "./allSVG/Pilas";
 import Bot from "./allSVG/Bot";
 import Enviar from "./allSVG/Enviar";
 import Salir from "./allSVG/Salir";
+import Menu from "./allSVG/Menu";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -63,7 +64,7 @@ function App() {
                   <button className="nav-button-asistente">Asistente virtual</button>
                 </li>
               </ul>
-              <button onClick={handleDesplegarMenu} className={displayNavLinks?"menu display-nav-links":"menu"}>icono</button>
+              <button onClick={handleDesplegarMenu} className={displayNavLinks?"menu display-nav-links":"menu"}><Menu></Menu></button>
             </div>
         </nav>
       </header>
@@ -283,7 +284,7 @@ function App() {
 
       {/* reAct agent */}
 
-      <div className="reAct-agent">
+      {/* <div className="reAct-agent">
         <div className="chat">
           <div className="barra-salir-chat">
             <p>Agente virtual</p>
@@ -314,7 +315,7 @@ function App() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
