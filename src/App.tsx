@@ -25,6 +25,7 @@ import Network from "./allSVG/Network";
 import Pilas from "./allSVG/Pilas";
 import Bot from "./allSVG/Bot";
 import Enviar from "./allSVG/Enviar";
+import Salir from "./allSVG/Salir";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -284,18 +285,34 @@ function App() {
 
       <div className="reAct-agent">
         <div className="chat">
-          <div className="converzacion">
-            <div className="salir">
-              <button>X</button>
-            </div>
+          <div className="barra-salir-chat">
+            <p>Agente virtual</p>
+            <button><Salir></Salir></button>
+          </div>
+          <div className="conversacion">
+            <p className="human-message">hola</p>
+            <p className="ia-message">que pasa humano</p>
+            <p className="ia-message">que pasa humano</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quos rerum praesentium fugit rem, ratione molestiae labore suscipit ipsam voluptatem pariatur, minus, atque optio amet ullam repellat officia id delectus vitae saepe itaque et aut excepturi error! Non officiis, quia dolorem animi perspiciatis tempore. Facere cumque temporibus ipsa fuga mollitia.</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
+            <p className="human-message">hola</p>
 
           </div>
-          <form action="POST">
-            <input type="text" />
+          <div className="ingreso-texto">
+            <input type="text" className="entrada-human-message" />
             <button>
-              <Enviar></Enviar>
+              <p>Enviar</p>
             </button>
-          </form>
+          </div>
         </div>
       </div>
 

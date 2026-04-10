@@ -773,45 +773,133 @@ input[type="text"] {
 }
 
 .chat{
-  background-color: #22223b;
-  width: 560px;
-  height: 400px;
-  /* padding: 3em; */
-  border-radius: 1em;
+  background-color: #e9ecef;
+  width: 660px;
+  height: 530px;
+  border-radius: 3em 3em 1em 1em;
   position: relative;
 }
 
-.chat input{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  width: calc(100% - 2.7em);
-}
-.chat button{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  /* background-color: lightgrey; */
-  border-radius: 1em;
-  height: 3.8em;
-  width: 3.8em;
-}
-.converzacion{
-  position: absolute;
-}
-
-.salir{
-  position: absolute;
-  z-index: 110;
-  padding-right: 509.34px;
+.barra-salir-chat{
+  position: relative;
+  background-image: linear-gradient(
+    45deg,
+    hsl(293deg 95% 67%) 0%,
+    hsl(288deg 99% 70%) 8%,
+    hsl(284deg 100% 72%) 17%,
+    hsl(279deg 100% 73%) 25%,
+    hsl(274deg 100% 75%) 33%,
+    hsl(269deg 100% 76%) 42%,
+    hsl(264deg 100% 77%) 50%,
+    hsl(259deg 100% 78%) 58%,
+    hsl(253deg 100% 79%) 67%,
+    hsl(248deg 100% 79%) 75%,
+    hsl(244deg 97% 80%) 83%,
+    hsl(239deg 91% 80%) 92%,
+    hsl(235deg 85% 78%) 100%
+  );
+  border-radius: 1em 1em 0 0;
+  height: 4em;
   background-color: red;
-  left: 0;
+  color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
 }
 
-.salir button{
-  position: relative;
+.barra-salir-chat button{
+  position: absolute;
+  left: 1.5em;
+  top: 1.5em;
+  border: none;
   background-color: transparent;
-  margin: 0;
-  border: 0;
+}
+.barra-salir-chat button svg{
+  width: 3em;
+}
+
+.conversacion{
+  height: calc(100% - 10em);
+  overflow-y: auto; 
+}
+
+.ingreso-texto{
+  padding: 1em;
+  height: 6em;
+  gap: 1em;
+  background-color: #dee2e6;
+  display: flex;
+  border-radius: 0 0 1em 1em;
+  border-top: 0.2em solid #ced4da;
+}
+
+.ingreso-texto button{
+  background-image: linear-gradient(
+    45deg,
+    hsl(293deg 95% 67%) 0%,
+    hsl(288deg 99% 70%) 8%,
+    hsl(284deg 100% 72%) 17%,
+    hsl(279deg 100% 73%) 25%,
+    hsl(274deg 100% 75%) 33%,
+    hsl(269deg 100% 76%) 42%,
+    hsl(264deg 100% 77%) 50%,
+    hsl(259deg 100% 78%) 58%,
+    hsl(253deg 100% 79%) 67%,
+    hsl(248deg 100% 79%) 75%,
+    hsl(244deg 97% 80%) 83%,
+    hsl(239deg 91% 80%) 92%,
+    hsl(235deg 85% 78%) 100%
+  );
+  border-radius: 2em;
+  height: 4em;
+  border: #aaa;
+}
+
+.ingreso-texto button p{
+  padding: 0.5em;
+  font-size: 1.3em;
+  color: #eee;
+}
+
+.human-message, .ia-message{
+  padding: 1em;
+  margin: 0.4em 1em 0.4em 1em;
+  border-radius: 1em;
+  /* border: 2px solid #aaa; */
+  border: none;
+  width: fit-content;
+
+  --shadow-color: 210deg 6% 58%;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);;
+}
+
+.human-message{
+  background-image: linear-gradient(
+    45deg,
+    hsl(293deg 95% 67%) 0%,
+    hsl(288deg 99% 70%) 8%,
+    hsl(284deg 100% 72%) 17%,
+    hsl(279deg 100% 73%) 25%,
+    hsl(274deg 100% 75%) 33%,
+    hsl(269deg 100% 76%) 42%,
+    hsl(264deg 100% 77%) 50%,
+    hsl(259deg 100% 78%) 58%,
+    hsl(253deg 100% 79%) 67%,
+    hsl(248deg 100% 79%) 75%,
+    hsl(244deg 97% 80%) 83%,
+    hsl(239deg 91% 80%) 92%,
+    hsl(235deg 85% 78%) 100%
+  );
+  color: #ddd;
+  margin-left: 5em;
+  margin-left: auto;
+}
+
+.ia-message{
+  background-color: #fff;
+  color: #000814;
 }
