@@ -33,6 +33,12 @@ function App() {
   const handleDesplegarMenu = () => {
     setDisplayNavLinks(!displayNavLinks)
   };
+
+  const [displayChatBot, SetDisplayChatBot] = useState<boolean>(false)
+  const handleDesplegarChat = () => {
+    SetDisplayChatBot(!displayChatBot)
+  };
+
   const textStyle = {
     fontFamily: "roboto",
     fontSize: '14px',
@@ -61,7 +67,10 @@ function App() {
                   <a onClick={()=>{setDisplayNavLinks(false)}} className="nav-link" href="#contacto"><Carta></Carta><p>Contacto</p></a>
                 </li>
                 <li className="nav-item">
-                  <button onClick={()=>{setDisplayNavLinks(false)}} className="nav-button-asistente">Asistente virtual</button>
+                  <button onClick={()=>{
+                    setDisplayNavLinks(false)
+                    handleDesplegarChat()
+                    }} className="nav-button-asistente">Asistente virtual</button>
                 </li>
               </ul>
               <button onClick={handleDesplegarMenu} className={displayNavLinks?"menu display-nav-links":"menu"}><Menu></Menu></button>
@@ -284,11 +293,11 @@ function App() {
 
       {/* reAct agent */}
 
-      {/* <div className="reAct-agent">
+      {displayChatBot?<div className="reAct-agent">
         <div className="chat">
           <div className="barra-salir-chat">
             <p>Agente virtual</p>
-            <button><Salir></Salir></button>
+            <button onClick={handleDesplegarChat}><Salir></Salir></button>
           </div>
           <div className="conversacion">
             <p className="human-message">hola</p>
@@ -315,7 +324,7 @@ function App() {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>:<></>}
 
     </div>
   );
