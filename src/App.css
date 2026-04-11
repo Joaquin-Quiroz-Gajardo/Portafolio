@@ -104,6 +104,7 @@ button.menu{
   left: 2em;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 path.barras{
