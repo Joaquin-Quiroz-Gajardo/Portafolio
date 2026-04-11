@@ -597,6 +597,10 @@ cubo.scene{
   cursor: pointer;
 }
 
+.no-display{
+  display: none;
+}
+
 section.contenido{
   --shadow-color: 206deg 28% 59%;
   background-color: #e3f2fd;
