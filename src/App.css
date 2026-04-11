@@ -149,6 +149,7 @@ a.navbar-brand{
 }
 
 button.nav-button-asistente{
+  cursor: pointer;
   padding: 0.7em;
   background-color: yellow;
   background-image: linear-gradient(
@@ -592,6 +593,10 @@ cubo.scene{
 
 /* trabajos, proyectos y habilidades */
 
+.ver-mas{
+  cursor: pointer;
+}
+
 section.contenido{
   --shadow-color: 206deg 28% 59%;
   background-color: #e3f2fd;
@@ -923,6 +928,7 @@ input[type="text"] {
   top: 1.5em;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .barra-salir-chat button svg{
   width: 3em;
@@ -963,6 +969,7 @@ input[type="text"] {
   border-radius: 1em;
   height: 4em;
   border: #aaa;
+  cursor: pointer;
 }
 
 .ingreso-texto button p{
