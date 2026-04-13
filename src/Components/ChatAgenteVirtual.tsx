@@ -27,16 +27,25 @@ const ChatAgenteVirtual = (props:HandleType) => {
       setNuevoTextoHumano(e.target.value);
       // console.log(e.target.value)
     }; 
-  function handleChatClick():void{
+  async function handleChatClick(): Promise<void>{
     if (nuevoTextoHumano != ""){
-      console.log(nuevoTextoHumano)
-  
-      setChatMessages([...chatMessages, {
+      setChatMessages(prevItems => [...prevItems, {
         mensaje:nuevoTextoHumano,
         autor:"humano"
       }]);
       setNuevoTextoHumano("");
       (document.getElementById('input-usuario') as HTMLInputElement).value = '';
+
+
+      fetch('http://localhost:3003/agente')
+        .then(response => response.json()) 
+        .then(data => {
+          console.log(data)
+        setChatMessages(prevItems => [...prevItems, data]);
+      })    
+        .catch(error => console.error('Error:', error));
+  
+      
     }
   }
 
