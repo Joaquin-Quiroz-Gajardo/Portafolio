@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import Salir from '../allSVG/Salir'
+import e from 'express'
 
 type HandleType = {
     handleDesplegarChat: React.MouseEventHandler<HTMLButtonElement>
@@ -12,32 +13,31 @@ type MensajesHumanoRobot = {
 
 
 const ChatAgenteVirtual = (props:HandleType) => {
+
+
   const [nuevoTextoHumano, setNuevoTextoHumano] = useState<string>("");
-  
   const [chatMessages, setChatMessages] = useState<MensajesHumanoRobot[]>([
     {
       mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
       autor: "bot"
     },]);
-  // let chatMessages: MensajesHumanoRobot[]=[
-  //   {
-  //     mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
-  //     autor: "bot"
-  //   },
-  //   {
-  //     mensaje: "soy humano",
-  //     autor: "humano"
-  //   },
-  // ]  
   
+
   const handleChangeTextoHumano = (e: ChangeEvent<HTMLInputElement>):void => {
       setNuevoTextoHumano(e.target.value);
       // console.log(e.target.value)
-    };
-  
+    }; 
   function handleChatClick():void{
     console.log(nuevoTextoHumano)
+
+    setChatMessages([...chatMessages, {
+      mensaje:nuevoTextoHumano,
+      autor:"humano"
+    }]);
+    setNuevoTextoHumano("");
+    (document.getElementById('input-usuario') as HTMLInputElement).value = '';
   }
+
   return (
     <div className="reAct-agent">
         <div className="chat">
@@ -54,7 +54,7 @@ const ChatAgenteVirtual = (props:HandleType) => {
 
           </div>
           <div className="ingreso-texto">
-            <input onChange={handleChangeTextoHumano} type="text" className="entrada-human-message" />
+            <input onChange={handleChangeTextoHumano} id='input-usuario' type="text" className="entrada-human-message" />
             <button onClick={handleChatClick}>
               <p>Enviar</p>
             </button>
