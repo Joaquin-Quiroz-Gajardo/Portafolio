@@ -10,33 +10,34 @@ type MensajesHumanoRobot = {
   autor: "humano"|"bot"
 }
 
-const [nuevoTextoHumano, setNuevoTextoHumano] = useState<string>("");
-
-const [chatMessages, setChatMessages] = useState<MensajesHumanoRobot[]>([
-  {
-    mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
-    autor: "bot"
-  },]);
-// let chatMessages: MensajesHumanoRobot[]=[
-//   {
-//     mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
-//     autor: "bot"
-//   },
-//   {
-//     mensaje: "soy humano",
-//     autor: "humano"
-//   },
-// ] 
-
-const handleChangeTextoHumano = (e: ChangeEvent<HTMLInputElement>) => {
-    setNuevoTextoHumano(e.target.value);
-  };
-
-function handleChat():void{
-
-}
 
 const ChatAgenteVirtual = (props:HandleType) => {
+  const [nuevoTextoHumano, setNuevoTextoHumano] = useState<string>("");
+  
+  const [chatMessages, setChatMessages] = useState<MensajesHumanoRobot[]>([
+    {
+      mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
+      autor: "bot"
+    },]);
+  // let chatMessages: MensajesHumanoRobot[]=[
+  //   {
+  //     mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
+  //     autor: "bot"
+  //   },
+  //   {
+  //     mensaje: "soy humano",
+  //     autor: "humano"
+  //   },
+  // ]  
+  
+  const handleChangeTextoHumano = (e: ChangeEvent<HTMLInputElement>):void => {
+      setNuevoTextoHumano(e.target.value);
+      // console.log(e.target.value)
+    };
+  
+  function handleChatClick():void{
+    console.log(nuevoTextoHumano)
+  }
   return (
     <div className="reAct-agent">
         <div className="chat">
@@ -54,7 +55,7 @@ const ChatAgenteVirtual = (props:HandleType) => {
           </div>
           <div className="ingreso-texto">
             <input onChange={handleChangeTextoHumano} type="text" className="entrada-human-message" />
-            <button onClick={handleChat}>
+            <button onClick={handleChatClick}>
               <p>Enviar</p>
             </button>
           </div>
