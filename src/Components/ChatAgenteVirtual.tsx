@@ -1,8 +1,39 @@
-import React from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import Salir from '../allSVG/Salir'
 
 type HandleType = {
     handleDesplegarChat: React.MouseEventHandler<HTMLButtonElement>
+}
+
+type MensajesHumanoRobot = {
+  mensaje: string
+  autor: "humano"|"bot"
+}
+
+const [nuevoTextoHumano, setNuevoTextoHumano] = useState<string>("");
+
+const [chatMessages, setChatMessages] = useState<MensajesHumanoRobot[]>([
+  {
+    mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
+    autor: "bot"
+  },]);
+// let chatMessages: MensajesHumanoRobot[]=[
+//   {
+//     mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
+//     autor: "bot"
+//   },
+//   {
+//     mensaje: "soy humano",
+//     autor: "humano"
+//   },
+// ] 
+
+const handleChangeTextoHumano = (e: ChangeEvent<HTMLInputElement>) => {
+    setNuevoTextoHumano(e.target.value);
+  };
+
+function handleChat():void{
+
 }
 
 const ChatAgenteVirtual = (props:HandleType) => {
@@ -14,26 +45,16 @@ const ChatAgenteVirtual = (props:HandleType) => {
             <button onClick={props.handleDesplegarChat}><Salir></Salir></button>
           </div>
           <div className="conversacion">
-            <p className="human-message">hola</p>
-            <p className="ia-message">que pasa humano</p>
-            <p className="ia-message">que pasa humano Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eveniet provident. Harum voluptate aliquam aperiam architecto, dolor id, consequatur corrupti dolorum animi maiores, culpa est! Facere perspiciatis quo minima quod, numquam distinctio nisi amet explicabo officiis harum corrupti et pariatur similique eveniet animi aut cumque cum vel repellendus porro officia!</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quos rerum praesentium fugit rem, ratione molestiae labore suscipit ipsam voluptatem pariatur, minus, atque optio amet ullam repellat officia id delectus vitae saepe itaque et aut excepturi error! Non officiis, quia dolorem animi perspiciatis tempore. Facere cumque temporibus ipsa fuga mollitia.</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
-            <p className="human-message">hola</p>
+            {chatMessages.map((dialogo: MensajesHumanoRobot) => (
+        <p className={dialogo.autor == "bot"?"ia-message":"human-message"}>{dialogo.mensaje}</p>
+      ))}
+              <p className='ia-message'>Agente virtual</p>
+              <p className='human-message'>Humano</p>
 
           </div>
           <div className="ingreso-texto">
-            <input type="text" className="entrada-human-message" />
-            <button>
+            <input onChange={handleChangeTextoHumano} type="text" className="entrada-human-message" />
+            <button onClick={handleChat}>
               <p>Enviar</p>
             </button>
           </div>
