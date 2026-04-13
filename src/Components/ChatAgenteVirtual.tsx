@@ -28,14 +28,16 @@ const ChatAgenteVirtual = (props:HandleType) => {
       // console.log(e.target.value)
     }; 
   function handleChatClick():void{
-    console.log(nuevoTextoHumano)
-
-    setChatMessages([...chatMessages, {
-      mensaje:nuevoTextoHumano,
-      autor:"humano"
-    }]);
-    setNuevoTextoHumano("");
-    (document.getElementById('input-usuario') as HTMLInputElement).value = '';
+    if (nuevoTextoHumano != ""){
+      console.log(nuevoTextoHumano)
+  
+      setChatMessages([...chatMessages, {
+        mensaje:nuevoTextoHumano,
+        autor:"humano"
+      }]);
+      setNuevoTextoHumano("");
+      (document.getElementById('input-usuario') as HTMLInputElement).value = '';
+    }
   }
 
   return (
