@@ -18,7 +18,7 @@ const ChatAgenteVirtual = (props:HandleType) => {
   const [nuevoTextoHumano, setNuevoTextoHumano] = useState<string>("");
   const [chatMessages, setChatMessages] = useState<MensajesHumanoRobot[]>([
     {
-      mensaje: "hola, soy el asistente de este portafolio, cuentame que es lo que quieres saber",
+      mensaje: "¡Hola! Soy el asistente digital de Joaquin. Pregúntame lo que quieras sobre sus competencias técnicas, historial laboral o estudios. Estoy listo para responder tus dudas.",
       autor: "bot"
     },]);
   
@@ -37,7 +37,13 @@ const ChatAgenteVirtual = (props:HandleType) => {
       (document.getElementById('input-usuario') as HTMLInputElement).value = '';
 
 
-      fetch('http://localhost:3003/agente')
+      fetch('http://localhost:3003/agente', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ mensaje: nuevoTextoHumano })
+      })
         .then(response => response.json()) 
         .then(data => {
           console.log(data)
@@ -60,8 +66,8 @@ const ChatAgenteVirtual = (props:HandleType) => {
             {chatMessages.map((dialogo: MensajesHumanoRobot) => (
         <p className={dialogo.autor == "bot"?"ia-message":"human-message"}>{dialogo.mensaje}</p>
       ))}
-              <p className='ia-message'>Agente virtual</p>
-              <p className='human-message'>Humano</p>
+              {/* <p className='ia-message'>Agente virtual</p>
+              <p className='human-message'>Humano</p> */}
 
           </div>
           <div className="ingreso-texto">

@@ -1,5 +1,7 @@
 // Filename - App.js
 
+import React from "react";
+
 import logo from "./logo.svg";
 import perfil from "./imagen-perfil-comprimida.png"
 import "./App.css";
@@ -28,6 +30,7 @@ import Enviar from "./allSVG/Enviar";
 import Salir from "./allSVG/Salir";
 import Menu from "./allSVG/Menu";
 import ChatAgenteVirtual from "./Components/ChatAgenteVirtual";
+import Contacto from "./Components/Contacto";
 
 function App() {
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
@@ -86,6 +89,7 @@ function App() {
             <img src={perfil} alt="imagen perfil" className="perfil"/>
           </div>
           <div className="bajada">
+            <div className="espacio-centro-hero"></div>
             <h1 className="descripcion">Especialista en inteligencia artificial</h1>
             <h2 className="subtitulo">Universidad de Buenos Aires</h2>
           </div>
@@ -276,20 +280,7 @@ function App() {
 
       {/* contacto */}
       <footer>
-        <div id="contacto" className="contacto">
-          <h2 className="contacto-titulo">Contacto</h2>
-          <form action="POST" className="contacto-form">
-            <label htmlFor="input-nombre">Nombre: </label>
-            <input type="text" id="input-nombre" />
-
-            <label htmlFor="input-email">Email: </label>
-            <input type="text" id="input-email" />
-            
-            <label htmlFor="input-mensaje">Mensaje: </label>
-            <input type="text" id="input-mensaje"/>
-            <button>Enviar</button>
-          </form>
-        </div>
+        <Contacto></Contacto>
       </footer>
 
       {/* reAct agent */}
