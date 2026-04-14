@@ -56,6 +56,7 @@ const Contacto = () => {
             <input onChange={(e)=>handleChange(e, SetMensajeReclutador)} required type="text" id="input-mensaje"/>
             <button 
             onClick={handleMensaje}
+            disabled={emailRegex.test(emailReclutador) && mensajeReclutador!="" && nameReclutador!=""?false:true}
             >Enviar</button>
           </form>
         </div>
