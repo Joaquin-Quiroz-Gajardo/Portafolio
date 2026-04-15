@@ -884,6 +884,21 @@ form.contacto-form button{
   opacity: 0;
 }
 
+.confirmacion-envio{
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2em;
+  padding: 2em;
+  background-color: green;
+  color: #eee;
+  border: 0.2em solid darkgreen;
+  font-size: 1.2em;
+  display: none;
+  border-radius: 0.5em;
+}
+
 /* agente virtual */
 
 .reAct-agent{

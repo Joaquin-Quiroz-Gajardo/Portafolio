@@ -35,6 +35,25 @@ const Contacto = () => {
         
       })    
         .catch(error => console.error('Error:', error));
+
+      SetNameReclutador("");
+      (document.getElementById('input-nombre') as HTMLInputElement).value = '';
+      SetEmailReclutador("");
+      (document.getElementById('input-email') as HTMLInputElement).value = '';
+      SetMensajeReclutador("");
+      (document.getElementById('input-mensaje') as HTMLInputElement).value = '';
+
+
+      setTimeout(() => {
+  document.getElementById('confirmacion-envio')?.style.setProperty('display', 'block');
+}, 1);
+
+      setTimeout(() => {
+  document.getElementById('confirmacion-envio')?.style.setProperty('display', 'none');
+}, 5000);
+
+
+      
   }
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -59,6 +78,9 @@ const Contacto = () => {
             disabled={emailRegex.test(emailReclutador) && mensajeReclutador!="" && nameReclutador!=""?false:true}
             >Enviar</button>
           </form>
+          <div className="confirmacion-envio" id='confirmacion-envio'>
+            <p>El mensaje ha sido <br />enviado exitosamente.</p>
+          </div>
         </div>
   )
 }
