@@ -37,7 +37,7 @@ const ChatAgenteVirtual = (props:HandleType) => {
       (document.getElementById('input-usuario') as HTMLInputElement).value = '';
 
 
-      fetch('http://localhost:3003/agente', {
+      fetch('https://node-crear-api.onrender.com/agente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

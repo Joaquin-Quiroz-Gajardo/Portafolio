@@ -90,8 +90,8 @@ function App() {
           </div>
           <div className="bajada">
             <div className="espacio-centro-hero"></div>
-            <h1 className="descripcion">Especialista en inteligencia artificial</h1>
-            <h2 className="subtitulo">Universidad de Buenos Aires</h2>
+            <h1 className="descripcion">Joaquín Quiroz</h1>
+            <h2 className="subtitulo">Analista de datos</h2>
           </div>
           <svg
   viewBox="0 0 100 100"
@@ -147,7 +147,13 @@ function App() {
             </div>
             <div className="about-me-title-content">
               <h2 id="about-me-title">Acerca de mí</h2>
-              <div className="about-me-texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque similique quisquam debitis fugiat consequuntur, porro, laudantium expedita at natus ea est iure laboriosam ipsam reprehenderit exercitationem veniam aliquam tenetur suscipit labore fuga eius fugit voluptatem quas. Distinctio, commodi corrupti? Nesciunt commodi repellendus voluptatibus quas! Fugiat aliquam sequi officia quaerat est.</div>
+              <div className="about-me-texto">Creo que la obtención de valor de los datos es un proceso largo, con muchos pasos que deben ser cumplidos. Los datos se deben extraer, analizar, clasificar, almacenar, disponer y por último presentar, si uno de estos pasos falla el resto de procesos perderá valor. Debido a esto me he involucrado en cada uno de estos procesos en mi trayectoria profesional. Busco seguir creando valor a partir de los datos, aportando en cada uno de los procesos de esta labor.</div>
+              <h3 id="about-me-title">Educación</h3>
+              <div className="about-me-texto">
+                Master en Artificial intelligence - Universidad de Buenos Aires (en curso) <br />
+                Sociología - Universidad de Chile <br />
+                Machine Learning Bootcamp - SaturdayAI
+              </div>
             </div>
 
             
@@ -164,36 +170,41 @@ function App() {
           <h2 className="trabajos-titulo">Trabajos</h2>
           <div className="trabajos-titulo-contenido">
             <Caso 
-              titulo="clasificador finalidades" 
-              bajada="Clasificador de texto, consumo por finalidades, datos de texto que tienen que entrar en mas de 90 categorias. accouracy mejoro de 0.86 a 0.93." 
+              titulo="Clasificador de consumo por finalidades" 
+              bajada="Clasificación de datos longitudinales de consumo." 
               imagen={<Goods></Goods>}
               fondo={<FondoContent></FondoContent>}
               >
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quae eius voluptatum maxime dolorum aliquid veniam earum ipsa illum hic ab eligendi mollitia vero, alias inventore ducimus deserunt id aliquam.</p>
+              <p>La encuesta de consumo por finalidades permite saber cómo son los gastos de una sociedad, diferenciándolos por diferentes tipos, gastos en vivienda y gastos en comida por ejemplo forman parte de diferentes grupos, en total había más de 90 categorías. Se contaba en esta ocasión con una muestra de datos clasificados, eran millones de datos no clasificados, y lo peor era que los datos no estaban equilibrados, había categorías sobrerrepresentadas, lo cual era lógico, la gente va a comprar pan más veces que las que compra una propiedad.
+              <br /> <br />
+              Cuando se crean clasificadores se asume una presencia equilibrada de las diferentes categorías, hecho que no se cumplió en este caso. Se hicieron varios intentos para solventar el desequilibrio en los datos, se ajustó los pesos para tomar más en consideración los ejemplos de las categorías menos comunes, se reemplazó tokens y se crearon casos con generación de texto, todo para mejorar el desempeño del modelo.
+              <br /> <br />
+              Se paso de un accuracy del 0,87 al 0,937. Esta fue una mejora notable, pero en retrospectiva era un desafío irresoluble, había muchas categorías sin casos, otros con uno o dos ejemplos, pero se logró mejorar lo que se tenía.
+              </p>
             </Caso>
             <Caso 
-              titulo="prospectivo-retrospectivo" 
-              bajada="Articulo academico. clasificacion de articulos, datos retrospectivos y prospectivos. accouracy alcanzado de 0.93." 
+              titulo="Clasificación prospectivo y retrospectivo" 
+              bajada="Evaluar si artículos académicos planifican el futuro o observan el pasado." 
               imagen={<Time></Time>}
               fondo={<FondoContent></FondoContent>}
               >
-              <p>mas contenido que tenemos</p>
+              <p>Existe una gran cantidad de estudios académicos que tratan los relaves mineros, que son piscinas llenas de residuos químicos usados en el proceso de extracción de minerales como el cobre. La hipótesis de esta investigación era que existía un exceso de estudios de carácter prospectivo (planificación hacia el futuro) en comparación a las investigaciones retrospectivas (análisis de las implementaciones actuales de relaves), pero no contábamos con datos que nos permitan separar estos tipos de artículos.
+              <br /> <br />
+              No teníamos los datos, pero teníamos la plataforma Sciencedirect para ayudarnos. Buscamos diferentes variaciones de relave minero o mining tailing, descubrimos artículos de diferentes rubros, los cuales pudimos almacenar con la ayuda de web scraping. Después comenzamos a crear una muestra de datos, artículos académicos eran separados en las categorías de prospectivo y retrospectivo, el resultado permitió etiquetar el resto de la base de datos con un clasificador de texto.
+              <br /> <br />
+              Hay muchos más artículos prospectivos, notamos que esto se puede deber a que las investigaciones que evalúan el impacto de proyectos ya existentes pueden ser más difíciles de llevar a cabo, y que hay muchos avances en el manejo de relaves minero que no son implementados, quizá por este mismo desafío de mirar de manera integrar a los relaves y su implementación.
+</p>
             </Caso>
             <Caso 
-              titulo="Google news" 
-              bajada="extraccion de datos de google news, noticias de conflictos ambientales." 
+              titulo="Extracción de noticias de google news" 
+              bajada="Que manifestaciones ocurren en Chile y ver si muchas noticias investigan el mismo hecho." 
               imagen={<Diario></Diario>}
               fondo={<FondoContent></FondoContent>}
               >
-              <p>mas contenido que tenemos</p>
-            </Caso>
-            <Caso 
-              titulo="Science direct" 
-              bajada="extraccion de articulos academicos de relaves mineros. mas articulos prospectivos que retrospectivos." 
-              imagen={<Science></Science>}
-              fondo={<FondoContent></FondoContent>}
-              >
-              <p>mas contenido que tenemos</p>
+              <p>Pese a que vivimos en la era de la información pareciera que hay muchas manifestaciones que pese a ocurrir no son registradas. Si bien siempre han habido catastros de las manifestaciones y conflictos existentes siempre existe un gran número de hechos que pasan desapercibidos para estas mediciones, para mejorar en este problema se realizó una extracción de datos de conflictos de google, pero no solo obtener noticias, sino comparándolas para ver si varias noticias pertenecen al mismo hecho.
+              <br /><br />
+              Se busco las noticias de manifestaciones a lo largo de todas las comunas de chile, esto generó una serie de problemas, noticias no relacionadas, confusiones de lugares por los nombres ambiguos de las comunas, por lo que se necesito de repasar cada una de las dos mil noticias recopiladas para lograr determinar el conjunto de noticias apropiadas.
+              </p>
             </Caso>
 
           </div>
@@ -207,30 +218,41 @@ function App() {
           <h2 className="proyectos-titulo">Proyectos</h2>
           <div className="proyectos-contenido">
             <Caso 
-              titulo="Active learning" 
-              bajada="Algo" 
+              titulo="Active learning sobre datos de texto" 
+              bajada="Cual es la forma más efectiva para que los humanos etiqueten datos." 
               imagen={<Network></Network>}
               fondo={<FondoContentAlternativo></FondoContentAlternativo>}
               >
-              <p>mas contenido que tenemos</p>
+              <p>No es molesto cuando tienes una base de datos no balanceada, y tienes que mandar a crear una muestra de datos clasificados sabiendo que el resultado no servirá, pues hay más casos de unas categorías y pocas de las otras. Para este problema está el active learning, que buscaba encontrar la forma más eficiente de etiquetar datos por humanos, de tal manera que se maximice las posibilidades de obtener ejemplos de los grupos menos comunes. Este proyecto implementa este principio en datos de tipo texto.
+              <br /><br />
+              Hay muchas estrategias que buscan determinar cuál es la categoría más apropiada para ser etiquetada por un humano. clasificar los datos no etiquetados y tomar aquellos casos que son menos comunes, hacer validación cruzada, elegir aquellos casos en que el modelo tiene menos certeza, más. todas estas alternativas fueron evaluadas en bases de datos de diferentes características, diferente número de categorías, diferente nivel de desbalance entre las categorías.
+              <br /><br />
+              Finalmente se determinó que esta estrategia empieza a ver resultados en bases de datos más desbalanceadas y con muchas categorías, allí la estrategia de validación cruzada mostró mejoras significativas.
+              </p>
             </Caso>
 
             <Caso 
-              titulo="Detector de pilas en vertederos" 
-              bajada="algo" 
+              titulo="Detector de pilas" 
+              bajada="Encontrar las pilas que hay en los vertederos." 
               imagen={<Pilas></Pilas>}
               fondo={<FondoContentAlternativo></FondoContentAlternativo>}
               >
-              <p>mas contenido que tenemos</p>
+              <p>Las pilas en los vertederos son un peligro constante, puesto que además de contaminar pueden provocar incendios, por lo que desarrollamos un detector de pilas en vertederos, pero con un modelo de detección de objetos en tiempo real, dado que la gracia es detectarlas en el momento, no.
+              <br /><br />
+              El gran desafío de este proyecto no fue el entrenamiento del modelo de YOLO, sino que fue crear la base de datos. fueron recopilados datos desde google y pinterest, luego creamos la base de datos de entrenamiento mostrando el cuadrante en donde estaban las pilas, colocamos las coordenadas en que aparecían estas pilas en la imagen, lo que permitió crear la base de entrenamiento para este clasificador.
+              </p>
             </Caso>
 
             <Caso 
-              titulo="RAG agent" 
-              bajada="algo" 
+              titulo="Agente virtual" 
+              bajada="Un asistente virtual que tiene como objetivo explicar el perfil de un postulante." 
               imagen={<Bot></Bot>}
               fondo={<FondoContentAlternativo></FondoContentAlternativo>}
               >
-              <p>mas contenido que tenemos</p>
+              <p>Yo me encontraba creando este portafolio cuando pensé que sería entretenido incluir un agente virtual que entregue mis antecedentes con solo preguntarle, aca explico el proceso de desarrollo de esta herramienta.
+              <br /><br />
+              El agente se creó utilizando langraph. le pase al modelo un resumen con mis antecedentes, después monte todo el backend con node subido en GCE. El agente utiliza la api de openAi, y con el modelo de gpt-3.5-turbo, dado que mostró buen desempeño a la vez que no consumía muchos créditos.
+              </p>
             </Caso>
           </div>
         </div>
@@ -253,18 +275,49 @@ function App() {
           <div className="habilidades-tecnologias-contenedor">
             <h3 className="habilidades-tecnologias-titulo">Tecnologias y librerias</h3>
             <ul>
+              <li>Node y Express</li>
+              <li>React</li> 
               <li>Pandas</li>
               <li>Langgraph</li>
-              <li>Node</li>
-              <li>React</li> 
             </ul>
           </div>
           <div className="habilidades-cloud-contenedor">
-            <h3 className="habilidades-cloud-titulo">AWS</h3>
+            <h3 className="habilidades-cloud-titulo">Cloud</h3>
             <ul>
               <li>EC2</li>
-              <li>Lambda</li>
               <li>RDS</li>
+              <li>GCE</li>
+            </ul>
+          </div>
+          <div className="habilidades-cloud-contenedor">
+            <h3 className="habilidades-cloud-titulo">Bases de datos</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+          <div className="habilidades-cloud-contenedor">
+            <h3 className="habilidades-cloud-titulo">Machine Learning</h3>
+            <ul>
+              <li>Scikit-learn</li>
+              <li>TensorFlow</li>
+              <li>Keras</li>
+              <li>Huggingface</li>
+              <li>langGraph</li>
+            </ul>
+          </div>
+          <div className="habilidades-cloud-contenedor">
+            <h3 className="habilidades-cloud-titulo">Control de versiones</h3>
+            <ul>
+              <li>Git</li>
+              <li>Github</li>
+            </ul>
+          </div>
+          <div className="habilidades-cloud-contenedor">
+            <h3 className="habilidades-cloud-titulo">Web Scraping</h3>
+            <ul>
+              <li>Beautifulsoup</li>
+              <li>Scrapy</li>
             </ul>
           </div>
           <div className="habilidades-lenguajes-contenedor">

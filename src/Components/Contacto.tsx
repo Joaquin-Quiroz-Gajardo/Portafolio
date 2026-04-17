@@ -18,7 +18,7 @@ const Contacto = () => {
 
   const handleMensaje= async (e: React.MouseEvent<HTMLButtonElement>) =>{
     e.preventDefault()
-    fetch('http://localhost:3003/mensaje', {
+    fetch('https://node-crear-api.onrender.com/mensaje', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ const Contacto = () => {
             >Enviar</button>
           </form>
           <div className="confirmacion-envio" id='confirmacion-envio'>
-            <p>El mensaje ha sido <br />enviado exitosamente.</p>
+            <p>El mensaje ha<br />sido enviado.</p>
           </div>
         </div>
   )

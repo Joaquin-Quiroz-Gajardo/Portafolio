@@ -485,7 +485,7 @@ div.about-me{
   }
 }
 
-.about-me-title-content h2{
+.about-me-title-content h2, .about-me-title-content h3{
   color: #eee;
 }
 #about-me-title{
@@ -603,6 +603,11 @@ cubo.scene{
 
 .no-display{
   display: none;
+}
+
+.trabajo-descripcion{
+  font-size: 1.7em;
+  color: #022b3a;
 }
 
 section.contenido{
