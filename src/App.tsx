@@ -33,6 +33,14 @@ import ChatAgenteVirtual from "./Components/ChatAgenteVirtual";
 import Contacto from "./Components/Contacto";
 
 function App() {
+
+  fetch('https://node-crear-api.onrender.com/hola')
+  .then(response => response.json()) // Parses JSON response
+  .then(data => console.log(data))   // Accesses the data
+  .catch(error => console.error('Error:', error)); // Handles network errors
+
+
+
   const [displayNavLinks, setDisplayNavLinks] = useState<boolean>(false)
   const handleDesplegarMenu = () => {
     setDisplayNavLinks(!displayNavLinks)
